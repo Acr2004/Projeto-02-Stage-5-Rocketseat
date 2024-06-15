@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+.hide {
+    display: none;
+}
+
+html, body, input, button {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #040924;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #FFF;
+    border-radius: .6rem;
+}
+
+main {
+    width: min(42.8rem, 90%);
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 4rem;
+    color: #0C3440;
+    margin-bottom: 3.2rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    margin-bottom: 1.6rem;
+}
+
+label {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: #00453A;
+}
+
+input {
+    padding: 1.6rem;
+    background-color: #DCE2E9;
+    border: none;
+    outline: 2px solid rgba(73, 80, 87, .3);
+    border-radius: .4rem;
+    color: #212529;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+input::placeholder {
+    color: rgb(73, 80, 87, .5);
+}
+
+input:focus {
+    outline: 2px solid #02799D;;
+}
+
+main button {
+    margin-top: 3.2rem;
+    padding: 1.6rem;
+    background-color: #02799D;
+    width: 100%;
+    border: none;
+    border-radius: .4rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: background .3s;
+    display: flex;
+    gap: .8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+main button:hover {
+    background-color: #035d79;
+}
+
+/* Modal */
+.modal-wrapper.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-wrapper {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    position: relative;
+    padding: 4.8rem 6.4rem;
+}
+
+.modal-wrapper button {
+    position: absolute;
+    background: none;
+    border: none;
+    top: 1.6rem;
+    right: 1.6rem;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.modal-wrapper button:hover {
+    transform: scale(1.2);
+}
+
+h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #0C3440;
+    line-height: 4rem;
+}
+
+/* Error */
+.error.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.error {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2rem;
+    padding-block: .8rem;
+    color: #FFF;
+    background-color: #F03E3E;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: transform .5s;
+}
